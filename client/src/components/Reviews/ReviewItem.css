@@ -1,0 +1,101 @@
+.expense-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    background-color: #4b4b4b;
+  }
+
+.expense-item__description {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: flex-end;
+    flex-flow: column-reverse;
+    justify-content: flex-start;
+    flex: 1;
+}
+
+.review-item__title {
+    color: #3a3a3a;
+    font-size: 1rem;
+    flex: 1;
+    font-weight: 500;
+    margin: 0 1rem;
+    color:ghostwhite;
+}
+
+.review-item__artist {
+    color: #3a3a3a;
+    font-size: 1rem;
+    flex: 1;
+    margin: 0 1rem;
+    color: white;
+}
+
+.expense-item h2 {
+    
+}
+
+.expense-item__price {
+    min-width: 70px;
+    min-height: 70px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    border: 1px solid white;
+    border-radius: 12px;
+}
+
+.highest{
+    background-color: #ff0000;
+}
+
+.high{
+    background-color: #ff9100;
+}
+
+.medium{
+    background-color: #00ff08;
+}
+
+.low{
+    background-color: #8400ff;
+}
+
+.review-item__info{
+}
+
+.expense-item__cover{
+    max-width: 96px;
+    max-height: 96px;
+    border-radius: 12px;
+}
+
+@media (min-width: 580px) {
+    .expense-item__description {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex: 1;
+    }
+
+    .expense-item__description h2 {
+        font-size: 1.25rem;
+    }
+
+    .expense-item__price {
+        font-size: 1.25rem;
+        position: relative;
+    }
+
+    .expense-item__price p{
+        margin: 0;
+        position: absolute;               
+        top: 50%;                        
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%); 
+    }
+}
