@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Reviews from "./components/Reviews/Reviews";
 import NewReview from "./components/NewReview/NewReview";
 
@@ -56,13 +56,13 @@ import reviewsData from "./components/NewReview/reviews.json";
 // ];
 
 function App() {
-  // const [data, setData] = useState(null);
+  const [data, setData] = useState(null);
 
-  // useEffect(() => {
-  //   fetch("/api")
-  //     .then((res) => res.json())
-  //     .then((data) => setData(data.message));
-  // }, []);
+  useEffect(() => {
+    fetch("/api")
+      .then((res) => res.json())
+      .then((data) => setData(data.message));
+  }, []);
 
   const [reviews, setReviews] = useState(reviewsData);
 
@@ -76,6 +76,7 @@ function App() {
     <div>
       <NewReview onAddReview={addReviewHandler} />
       <Reviews items={reviews}/>
+      <p>{!data ? "Loading..." : data}</p>
     </div>
   );
 }

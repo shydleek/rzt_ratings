@@ -4,13 +4,18 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "vercel": "^29.2.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server/index.js",
     "build": "cd client && npm install && npm run build"
   },
+  "engines": {
+    "node": "14.15.5"
+  },
+  "homepage": ".",
   "keywords": [],
   "author": "",
   "license": "ISC",
