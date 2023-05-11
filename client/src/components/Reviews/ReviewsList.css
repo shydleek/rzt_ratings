@@ -1,9 +1,9 @@
-.expenses-list {
+.reviews-list {
     list-style: none;
     padding: 0;
   }
   
-.expenses-list__fallback {
+.reviews-list__fallback {
     color: white;
     text-align: center;
 }

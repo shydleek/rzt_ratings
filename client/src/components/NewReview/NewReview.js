@@ -20,7 +20,7 @@ function NewReview(props) {
     }
 
     return (
-        <div className="new-expense">
+        <div className="new-review">
             {!isEditing && <button onClick={startEditingHandler}>Добавить новый отзыв</button>}
             {isEditing && <ReviewForm onSaveReviewData={saveReviewDataHandler} onStop={stopEditingHandler} />}
         </div>

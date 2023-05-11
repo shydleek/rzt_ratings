@@ -3,10 +3,10 @@ import './ReviewsList.css'
 
 const ReviewsList = (props) => {
   if (props.items.length === 0) {
-    return <h2 className="expenses-list__fallback">Не найдено отзывов.</h2>
+    return <h2 className="reviews-list__fallback">Не найдено отзывов.</h2>
   }
 
-  return <ul className="expenses-list">
+  return <ul className="reviews-list">
     {props.items.map((review) => (
       <ReviewItem
         key={review.id}

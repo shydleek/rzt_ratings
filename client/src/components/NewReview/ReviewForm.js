@@ -163,67 +163,69 @@ function ReviewForm(props) {
 
     return (
         <form onSubmit={submitHandler}>
-            <div className='new-expense__controls'>
-                <div className='new-expense__control'>
+            <div className='new-review__controls'>
+                <div className='new-review__control'>
                     <label>Название</label>
                     <input type='text' value={userInput.enteredTitle} required onChange={titleChangeHandler} />
                 </div>
-                <div className='new-expense__control'>
+                <div className='new-review__control'>
                     <label>Артист</label>
                     <input type='text' value={userInput.enteredArtist} required onChange={artistChangeHandler} />
                 </div>
-                <div className='new-expense__control'>
+                <div className='new-review__control'>
                     <label>Рифмы/Образы</label>
-                    <input type='range' min='1'max='10' step='1' value={userInput.enteredRhymeScore} required onChange={rhymeScoreChangeHandler} onInput="num.value = this.value"/>
+                    <input className='new-review__slider' type='range' min='1' max='10' value={userInput.enteredRhymeScore} required onChange={rhymeScoreChangeHandler} onInput="num.value = this.value"/>
                     <output id="num" className='output'>{userInput.enteredRhymeScore}</output>
                 </div>
-                <div className='new-expense__control'>
+                <div className='new-review__control'>
                     <label>Структура/Ритмика</label>
-                    <input type='range' min='1'max='10' step='1' value={userInput.enteredStructureScore} required onChange={structureScoreChangeHandler} onInput="num.value = this.value"/>
+                    <input className='new-review__slider' type='range' min='1' max='10' step='1' value={userInput.enteredStructureScore} required onChange={structureScoreChangeHandler} onInput="num.value = this.value"/>
                     <output id="num" className='output'>{userInput.enteredStructureScore}</output>
                 </div>
-                <div className='new-expense__control'>
+                <div className='new-review__control'>
                     <label>Реализация выбранного стиля</label>
-                    <input type='range' min='1'max='10' step='1' value={userInput.enteredImplementScore} required onChange={implementScoreChangeHandler} onInput="num.value = this.value"/>
+                    <input className='new-review__slider' type='range' min='1' max='10' step='1' value={userInput.enteredImplementScore} required onChange={implementScoreChangeHandler} onInput="num.value = this.value"/>
                     <output id="num" className='output'>{userInput.enteredImplementScore}</output>
                 </div>
-                <div className='new-expense__control'>
+                <div className='new-review__control'>
                     <label>Индивидуальность/Харизма</label>
-                    <input type='range' min='1'max='10' step='1' value={userInput.enteredIdentityScore} required onChange={identityScoreChangeHandler} onInput="num.value = this.value"/>
+                    <input className='new-review__slider' type='range' min='1' max='10' step='1' value={userInput.enteredIdentityScore} required onChange={identityScoreChangeHandler} onInput="num.value = this.value"/>
                     <output id="num" className='output'>{userInput.enteredIdentityScore}</output>
                 </div>
-                <div className='new-expense__control'>
+                <div className='new-review__control'>
                     <label>Атмосфера/Вайб</label>
-                    <input type='range' min='1'max='5' step='1' value={userInput.enteredVibeScore} required onChange={vibeScoreChangeHandler} onInput="num.value = this.value"/>
+                    <input className='new-review__slider' type='range' min='1' max='5' step='1' value={userInput.enteredVibeScore} required onChange={vibeScoreChangeHandler} onInput="num.value = this.value"/>
                     <output id="num" className='output'>{userInput.enteredVibeScore}</output>
                 </div>
-                <div className='new-expense__control'>
+                <div className='new-review__control'>
                     <label>Трендовость/Актуальность Жанра</label>
-                    <input type='range' min='1'max='5' step='1' value={userInput.enteredTrendScore} required onChange={trendScoreChangeHandler} onInput="num.value = this.value"/>
+                    <input className='new-review__slider' type='range' min='1' max='5' step='1' value={userInput.enteredTrendScore} required onChange={trendScoreChangeHandler} onInput="num.value = this.value"/>
                     <output id="num" className='output'>{userInput.enteredTrendScore}</output>
                 </div>
-                <div className='new-expense__control'>
-                    <label htmlFor="genre-select">Жанр</label>
-                    <select name="genres" id="genre-select" onChange={genreChangeHandler} required value={userInput.enteredGenre}>
-                        <option value="" hidden disabled selected>Выбрать</option>
-                        <option value="hiphop">Hip-Hop</option>
-                        <option value="r&b">R&B</option>
-                        <option value="pop">Pop</option>
-                        <option value="alternative">Alternative</option>
-                        <option value="rock">Rock</option>
-                    </select>
-                </div>
-                <div className='new-expense__control'>
-                    <label htmlFor="music-select">Тип</label>
-                    <select name="type" id="music-select" onChange={typeChangeHandler} required value={userInput.enteredType}>
-                        <option value="" hidden disabled selected>Выбрать</option>
-                        <option value="song">Песня</option>
-                        <option value="ep">EP</option>
-                        <option value="album">Альбом</option>
-                    </select>
+                <div className='new-review__select'>
+                    <div className='new-review__control'>
+                        <label htmlFor="genre-select">Жанр</label>
+                        <select name="genres" id="genre-select" onChange={genreChangeHandler} required value={userInput.enteredGenre}>
+                            <option value="" hidden disabled selected>Выбрать</option>
+                            <option value="hiphop">Hip-Hop</option>
+                            <option value="r&b">R&B</option>
+                            <option value="pop">Pop</option>
+                            <option value="alternative">Alternative</option>
+                            <option value="rock">Rock</option>
+                        </select>
+                    </div>
+                    <div className='new-review__control'>
+                        <label htmlFor="music-select">Тип</label>
+                        <select name="type" id="music-select" onChange={typeChangeHandler} required value={userInput.enteredType}>
+                            <option value="" hidden disabled selected>Выбрать</option>
+                            <option value="song">Песня</option>
+                            <option value="ep">EP</option>
+                            <option value="album">Альбом</option>
+                        </select>
+                    </div>
                 </div>
             </div>
-            <div className='new-expense__actions'>
+            <div className='new-review__actions'>
                 <button type='button' onClick={props.onStop}>Отменить</button>
                 <button type='submit'>Добавить отзыв</button>
             </div>
