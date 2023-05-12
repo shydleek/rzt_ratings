@@ -18,8 +18,8 @@ function ReviewForm(props) {
         enteredStructureScore: '5',
         enteredImplementScore: '5',
         enteredIdentityScore: '5',
-        enteredVibeScore: '2',
-        enteredTrendScore: '2',
+        enteredVibeScore: '1',
+        enteredTrendScore: '1',
         enteredGenre: '',
         enteredType: ''
     });
@@ -152,8 +152,8 @@ function ReviewForm(props) {
             enteredStructureScore: '5',
             enteredImplementScore: '5',
             enteredIdentityScore: '5',
-            enteredVibeScore: '2',
-            enteredTrendScore: '2',
+            enteredVibeScore: '1',
+            enteredTrendScore: '1',
             enteredGenre: '',
             enteredType: ''
         });

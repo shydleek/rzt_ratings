@@ -1,5 +1,5 @@
 {
-  "name": "react-complete-guide",
+  "name": "reviews-course-work",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,6 +8,9 @@
     "@testing-library/user-event": "^12.5.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "react-router": "^6.11.1",
+    "react-router-dom": "^6.11.1",
+    "react-router-hash-link": "^2.4.3",
     "react-scripts": "4.0.1",
     "web-vitals": "^0.2.4"
   },

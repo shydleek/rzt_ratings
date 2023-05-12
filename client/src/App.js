@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Reviews from "./components/Reviews/Reviews";
 import NewReview from "./components/NewReview/NewReview";
-
 import reviewsData from "./components/NewReview/reviews.json";
 
 function App() {
@@ -31,9 +30,9 @@ function App() {
 
   return (
     <div>
-      <NewReview onAddReview={addReviewHandler} />
-      <Reviews items={reviews_songs}/>
-      <Reviews items={reviews_albums}/>
+      <NewReview id='review' onAddReview={addReviewHandler} />
+      <Reviews id='songs' items={reviews_songs} title='song'/>
+      <Reviews id='albums' items={reviews_albums} title='album'/>
     </div>
   );
 }

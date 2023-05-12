@@ -17,8 +17,19 @@
 }
   
 .reviews-filter select {
+    cursor: pointer;
     font: inherit;
     padding: 0.5rem 3rem;
     font-weight: bold;
     border-radius: 6px;
+}
+
+.reviews-filter option {
+    cursor: pointer;
+}
+
+.reviews__title{
+    color: #fff;
+    text-align: center;
+    margin: 0;
 }

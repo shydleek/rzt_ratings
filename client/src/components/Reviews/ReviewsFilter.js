@@ -24,7 +24,7 @@ const ReviewsFilter = (props) => {
   return (
     <div className='reviews-filter'>
       <div className='reviews-filter__control'>
-        <label>Фильтр по оценке</label>
+        <label>Сортировка по оценке</label>
         <select value={props.selected} onChange={filterChangeHandler}>
           <option value='asc'>По возрастанию</option>
           <option value='desc'>По убыванию</option>

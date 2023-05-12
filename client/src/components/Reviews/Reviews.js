@@ -4,7 +4,7 @@ import ReviewsFilter from "./ReviewsFilter";
 import "./Reviews.css";
 import ReviewsList from "./ReviewsList";
 
-function Reviews(props) {
+function Reviews(props, title) {
   const [filteredAsc, setFilteredAsc] = useState("asc");
   //const [filteredGenre, setFilteredGenre] = useState("all");
 
@@ -28,6 +28,8 @@ function Reviews(props) {
   return (
     <div>
       <Card className="reviews">
+        {props.title === 'song' && <h1 className="reviews__title">Песни</h1>}
+        {props.title !== 'song' && <h1 className="reviews__title">Альбомы/EP</h1>}
         <ReviewsFilter
           selected={filteredAsc}
           onChangeFilter={filterChangeHandler}
